@@ -169,11 +169,11 @@
             if (validity.valid) return;
 
             // If field is required and empty
-            if (validity.valueMissing) return 'Please enter an email address.';
+            if (validity.valueMissing) return 'Va rugam  sa introduceti o adresa de email valida.';
 
             // If not the right type
             if (validity.typeMismatch) {
-                if (field.type === 'email') return 'Please enter a valid email address.';
+                if (field.type === 'email') return 'Va rugam sa introduceti o adresa de email valida.';
             }
 
             // If pattern doesn't match

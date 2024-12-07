@@ -85,11 +85,13 @@
 /* ------------------------------------------------------------------- 
  * ## fonts 
  * ------------------------------------------------------------------- */
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,600&display=swap");
+/*@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,600&display=swap");*/
+
+@import url('https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
 
 :root {
 	--font-1: "Roboto Flex", sans-serif;
-	--font-2: "DM Serif Display", Serif;
+	--font-2: "Pathway Gothic One", Serif;
 
   /* monospace
    */
@@ -120,7 +122,7 @@
 	--color-2-lightest             : hsla(127, 8%, 55%, 1);
 	--color-2-lighter              : hsla(127, 8%, 42%, 1);
 	--color-2-light                : hsla(127, 8%, 32%, 1);
-	--color-2-dark                 : hsla(127, 8%, 14%, 1);
+	--color-2-dark                 : #3F3C3A;
 	--color-2-darker               : hsla(127, 8%, 2%, 1);
 	
 	--color-3-light                : hsla(39, 93%, 100%, 1);
@@ -203,7 +205,7 @@
 
   /* others
    */
-	--color-body                   : #1D1915;
+	--color-body                   : #484949;
 	--color-border                 : rgba(7, 5, 5, 0.1);
 	--border-radius                : 5px;
 }
@@ -2760,6 +2762,15 @@ td:last-child {
 	line-height: calc(0.9375 * var(--space));
 }
 
+.text-span-title{
+	line-height: var(--vspace-1);
+	transform  : translate(0.2em, 0);
+	margin-top : 0;
+	color:var(--color-1-light);
+	font-weight:400;
+	text-transform: uppercase;
+}
+
 .text-pretitle {
 	font-family: var(--font-1);
 	font-size  : var(--text-md);
@@ -2804,7 +2815,7 @@ td:last-child {
 	font-weight      : 500;
 	font-size        : 1.1em;
 	line-height      : 1;
-	color            : var(--color-1);
+	color            : var(--color-3);
 	margin-right     : var(--vspace-0_25);
 	margin-bottom    : var(--vspace-0_25);
 }
@@ -2815,7 +2826,7 @@ td:last-child {
 
 .list-items__item-title,
 .list-items__item-small-title {
-	color     : var(--color-text-dark);
+	color     : var(--color-3);
 	margin-top: 0;
 }
 
@@ -3059,6 +3070,10 @@ td:last-child {
 	row-gap              : var(--grid-gap-v);
 }
 
+.grid-block a{
+	display:none;
+}
+
 .grid-block.no-h-gutter {
 	--grid-gap-h: 0;
 }
@@ -3155,12 +3170,20 @@ td:last-child {
 @media screen and (max-width: 800px) {
 	.grid-block {
 		--col: 8;
+		display:block;
+	}
+	.grid-block a{
+		display:block;
 	}
 }
 
 @media screen and (max-width: 600px) {
 	.grid-block {
 		--col: 4;
+		display:block;
+	}
+	.grid-block a{
+		display:block;
 	}
 }
 
@@ -3578,11 +3601,11 @@ td:last-child {
  * ------------------------------------------------------------------- */
 .s-intro {
 	--content-padding-top   : max(20rem, 18vh);
-	--content-padding-bottom: 10.8rem;
+	/*--content-padding-bottom: 10.8rem;*/
 	--content-min-height    : calc(var(--vspace-1) * 27);
 	z-index                 : 2;
-	background-color        : var(--color-2-dark);
-	background              : linear-gradient(20deg, hsl(130deg, 8%, 14%) 40%, hsl(0deg, 0%, 13%) 100%);
+	background-color        : var(--color-gray-16);
+	/*background              : linear-gradient(20deg, hsl(130deg, 8%, 14%) 40%, hsl(0deg, 0%, 13%) 100%);*/
 	width                   : 100%;
 	height                  : max(var(--content-min-height), 100vh);
 	overflow                : hidden;
@@ -3604,7 +3627,7 @@ td:last-child {
 
 .s-intro__content-inner {
 	--col       : 16;
-	--grid-gap-v: var(--vspace-0_5);
+	--grid-gap-v: var(--vspace-0_3);
 }
 
 .s-intro__content-text {
@@ -3612,6 +3635,14 @@ td:last-child {
 	grid-column: 1/span 11;
 	margin-top : var(--vspace-1);
 }
+
+/*.highlight-text{
+	background-color:#D64218;
+	border:0px solid #D64218;
+	border-radius: 10px;
+	width: 600px;
+    height: 250px;
+}*/
 
 .s-intro__content-pretitle {
 	margin-bottom: var(--vspace-0_125);
@@ -3636,8 +3667,8 @@ td:last-child {
 	font-size    : clamp(2rem, 4vw, 6rem);
 	line-height  : 1;
 	margin-top   : 0;
-	margin-bottom: var(--vspace-1_25);
-	color        : var(--color-3);
+	/*margin-bottom: var(--vspace-1_25);*/
+	color      : #fff;	
 }
 
 .s-intro__content-media {
@@ -3653,11 +3684,11 @@ td:last-child {
 
 .s-intro__content-media img {
 	z-index       : 2;
-	width         : max(440px, 10vw);
+	width         : max(440px, 13vw);
 	margin        : 0;
 	-o-object-fit : cover;
 	object-fit    : cover;
-	aspect-ratio  : 2/2.5;
+	/*aspect-ratio  : 2/2.5;*/
 	vertical-align: bottom;
 	box-shadow    : 0 60px 40px -40px rgba(0, 0, 0, 0.2);
 	position      : relative;
@@ -3842,14 +3873,14 @@ td:last-child {
  * ------------------------------------------------------------------- */
 @media screen and (max-width: 900px) {
 	.s-intro {
-		--content-padding-top: max(12rem, 18vh);
+		--content-padding-top: max(10rem, 2vh);
 		height               : auto;
 	}
 
-	.s-intro__content-inner {
+	/*.s-intro__content-inner {
 		--col       : 8;
 		--grid-gap-v: 0;
-	}
+	}*/
 
 	.s-intro__content-text {
 		grid-column-end: span 8;
@@ -3913,7 +3944,7 @@ td:last-child {
 
 @media screen and (max-width: 600px) {
 	.s-intro {
-		--content-padding-top: max(12rem, 16vh);
+		--content-padding-top: max(10rem, 2vh);
 	}
 
 	.s-intro__content-media .lines {
@@ -3947,6 +3978,16 @@ td:last-child {
  *
  *
  * ------------------------------------------------------------------- */
+ .modern-image {
+    max-width: 100%; /* Makes the image responsive */
+    height: auto;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+	transition: transform 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease; /* Smooth transition for multiple properties */
+}
+
+
+
 .s-about {
 	padding-top     : var(--vspace-6);
 	padding-bottom  : var(--vspace-6);
@@ -4655,6 +4696,35 @@ td:last-child {
 /* --------------------------------------------------------------------
  * ## services page
  * -------------------------------------------------------------------- */
+
+ .price-wrapper {
+	font-family: Arial, sans-serif;
+	display: inline-flex;
+	gap: 10px;
+	align-items: baseline;
+  }
+
+  .original-price {
+	color: #e63946;
+	text-decoration: line-through;
+	/*color: #888;  Culoare gri pentru prețul vechi */
+	font-size: 3rem;
+	font-family           : var(--font-2);
+	font-weight           : 400;
+	font-variant-ligatures: common-ligatures;
+	text-rendering        : optimizeLegibility;
+  }
+
+  .discounted-price {
+	color                 : var(--color-text);
+	font-weight: bold;
+	font-size: 5rem;
+	font-family           : var(--font-2);
+	font-weight           : 400;
+	font-variant-ligatures: common-ligatures;
+	text-rendering        : optimizeLegibility;
+  }
+
 .list-services {
 	list-style : none;
 	font-size  : calc(var(--text-size) * 0.95);
