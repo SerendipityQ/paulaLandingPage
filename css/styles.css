@@ -3545,7 +3545,7 @@ td:last-child {
 }
 
 .s-pagecontent {
-	padding-top   : var(--vspace-4);
+	padding-top   : var(--vspace-1);
 	padding-bottom: var(--vspace-3);
 }
 
@@ -3588,7 +3588,7 @@ td:last-child {
 
 @media screen and (max-width: 600px) {
 	.s-pagecontent {
-		padding-top: var(--vspace-3);
+		padding-top: var(--vspace-1);
 	}
 }
 
@@ -3782,7 +3782,7 @@ td:last-child {
 .s-intro__content-media .lines,
 .s-intro__content-title,
 .s-intro__content-pretitle,
-.s-intro__scroll-down {
+.s-intro__scroll-down{
 	transition-timing-function: cubic-bezier(0.28, 0.12, 0.22, 1);
 	transition-duration       : 0.9s;
 	transition-delay          : 0s;
