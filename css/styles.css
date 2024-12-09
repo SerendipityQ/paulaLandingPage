@@ -3314,11 +3314,11 @@ td:last-child {
 
 .s-header__menu-links a:focus,
 .s-header__menu-links a:hover {
-	color: var(--color-3);
+	color: var(--color-1-light );
 }
 
 .s-header__menu-links .current a {
-	color: var(--color-3);
+	color: var(--color-1-light );
 }
 
 /* header contact button
