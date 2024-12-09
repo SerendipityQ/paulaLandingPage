@@ -88,10 +88,11 @@
 /*@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,600&display=swap");*/
 
 @import url('https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
 
 :root {
 	--font-1: "Roboto Flex", sans-serif;
-	--font-2: "Pathway Gothic One", Serif;
+	--font-2: "Playfair", Serif;
 
   /* monospace
    */
@@ -188,7 +189,7 @@
 	--color-btn-text               : var(--color-text);
 	--color-btn-hover              : var(--color-gray-5);
 	--color-btn-hover-text         : var(--color-text);
-	--color-btn-primary            : var(--color-1);
+	--color-btn-primary            : var(--color-error-content );
 	--color-btn-primary-text       : var(--color-1-lightest);
 	--color-btn-primary-hover      : var(--color-1-light);
 	--color-btn-primary-hover-text : var(--color-2-dark);
@@ -506,6 +507,16 @@ table {
 
 /* row 
  */
+
+ .icon {
+    width: 30px; /* Lățimea iconiței */
+    height: 30px; /* Înălțimea iconiței */
+    margin-right: 10px; 
+    vertical-align: middle; 
+	position: relative;
+    top: 10px; /* Ajustează această valoare pentru a poziționa iconița */
+}
+
 .row {
 	display  : flex;
 	flex-flow: row wrap;
@@ -2766,9 +2777,8 @@ td:last-child {
 	line-height: var(--vspace-1);
 	transform  : translate(0.2em, 0);
 	margin-top : 0;
-	color:var(--color-1-light);
-	font-weight:400;
-	text-transform: uppercase;
+	color:var(--color-error-content); 
+	font-weight:700;
 }
 
 .text-pretitle {
@@ -2781,7 +2791,7 @@ td:last-child {
 }
 
 .text-display-title {
-	font-size     : var(--text-display-2);
+	font-size     : var(--text-display-1);
 	line-height   : 1.0606;
 	letter-spacing: -0.012em;
 	color         : var(--color-text-dark);
@@ -3668,7 +3678,7 @@ td:last-child {
 	line-height  : 1;
 	margin-top   : 0;
 	/*margin-bottom: var(--vspace-1_25);*/
-	color      : #fff;	
+	color      : var(--color-1-light);	
 }
 
 .s-intro__content-media {
@@ -3873,7 +3883,7 @@ td:last-child {
  * ------------------------------------------------------------------- */
 @media screen and (max-width: 900px) {
 	.s-intro {
-		--content-padding-top: max(10rem, 2vh);
+		--content-padding-top: max(8rem, 1vh);
 		height               : auto;
 	}
 
@@ -3887,7 +3897,7 @@ td:last-child {
 	}
 
 	.s-intro__content-title {
-		font-size: clamp(4rem, 10vw, 10.4rem);
+		font-size: clamp(3.5rem, 8vw, 8rem);
 	}
 
 	.s-intro__content-title br {
