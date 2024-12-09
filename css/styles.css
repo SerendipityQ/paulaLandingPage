@@ -115,7 +115,7 @@
    */
 	--color-1-lightest             : hsla(35, 87%, 96%, 1);
 	--color-1-lighter              : hsla(35, 87%, 69%, 1);
-	--color-1-light                : #c1AA90;
+	--color-1-light                : #fff;
 	--color-1-dark                 : hsla(35, 87%, 39%, 1);
 	--color-1-darker               : hsla(35, 87%, 29%, 1);
 	--color-1-darkest              : hsla(35, 87%, 10%, 1);
@@ -149,7 +149,7 @@
    * (https                     ://maketintsandshades.com/)
    */
 	--color-black                  : #000000;
-	--color-gray-19                : #121212;
+	--color-gray-19                : #181818;
 	--color-gray-18                : #242525;
 	--color-gray-17                : #363737;
 	--color-gray-16                : #484949;
@@ -466,6 +466,9 @@ body {
 ol,
 ul {
 	list-style: none;
+	list-style-type: none; /* Elimină punctele */
+    padding: 0;           /* Elimină indentarea implicită */
+    margin: 0;
 }
 
 blockquote,
@@ -505,8 +508,9 @@ table {
  *
  * ------------------------------------------------------------------- */
 
-/* row 
- */
+/* row */
+
+
 
  .icon {
     width: 30px; /* Lățimea iconiței */
@@ -2785,7 +2789,7 @@ td:last-child {
 	font-family: var(--font-1);
 	font-size  : var(--text-md);
 	line-height: var(--vspace-1);
-	color      : var(--color-1);
+	color      : var(--color-1-light);
 	transform  : translate(0.2em, 0);
 	margin-top : 0;
 }
@@ -2794,7 +2798,7 @@ td:last-child {
 	font-size     : var(--text-display-1);
 	line-height   : 1.0606;
 	letter-spacing: -0.012em;
-	color         : var(--color-text-dark);
+	color         : var(--color-1-light);
 	margin-top    : 0;
 	margin-bottom : var(--vspace-1_5);
 }
@@ -2825,7 +2829,7 @@ td:last-child {
 	font-weight      : 500;
 	font-size        : 1.1em;
 	line-height      : 1;
-	color            : var(--color-3);
+	color            : var(--color-error-content);
 	margin-right     : var(--vspace-0_25);
 	margin-bottom    : var(--vspace-0_25);
 }
@@ -2836,7 +2840,7 @@ td:last-child {
 
 .list-items__item-title,
 .list-items__item-small-title {
-	color     : var(--color-3);
+	color     : var(--color-error-content);
 	margin-top: 0;
 }
 
@@ -2932,7 +2936,7 @@ td:last-child {
 .s-testimonials {
 	padding-top     : var(--vspace-4);
 	padding-bottom  : var(--vspace-3);
-	background-color: var(--color-3);
+	background-color: var(--color-gray-19 );
 }
 
 .s-testimonials__header {
@@ -3538,7 +3542,7 @@ td:last-child {
 .s-pageheader {
 	padding-top     : var(--vspace-6);
 	padding-bottom  : var(--vspace-3);
-	background-color: var(--color-2-dark);
+	background-color: #181818;
 	text-align      : center;
 }
 
@@ -3546,7 +3550,7 @@ td:last-child {
 	margin-top : 0;
 	font-size  : clamp(5.2rem, 10vw, var(--text-huge-1));
 	line-height: 1.0465;
-	color      : var(--color-3);
+	color      : var(--color-1-light);
 }
 
 .s-pageheader .page-title__small-type {
@@ -4002,7 +4006,7 @@ td:last-child {
 	padding-top     : var(--vspace-6);
 	padding-bottom  : var(--vspace-6);
 	background-color: var(--color-2-dark);
-	color           : var(--color-3);
+	color           : var(--color-1-light);
 }
 
 .s-about .section-header {
@@ -4010,7 +4014,7 @@ td:last-child {
 }
 
 .s-about .text-display-title {
-	color: var(--color-3);
+	color:var(--color-1-light);
 }
 
 .s-about__content-imgbg {
@@ -4207,7 +4211,7 @@ td:last-child {
 .s-cta {
 	padding-top     : var(--vspace-4_5);
 	padding-bottom  : var(--vspace-3_5);
-	background-color: var(--color-2-dark);
+	background-color: #484949;
 	color           : var(--color-3);
 }
 
@@ -4739,7 +4743,7 @@ td:last-child {
 	list-style : none;
 	font-size  : calc(var(--text-size) * 0.95);
 	font-weight: 400;
-	color      : var(--color-text-dark);
+	color      : var(--color-1-light);
 	border-top : 1px dotted var(--color-border);
 	margin-top : calc(var(--vspace-0_25) * -1);
 	margin-left: 0;
